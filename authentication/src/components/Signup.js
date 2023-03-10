@@ -1,4 +1,5 @@
 import * as React from 'react';
+// import { Component } from 'react';
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -10,7 +11,12 @@ import SecondPage from "./SecondPage";
 import ThirdPage from "./ThirdPage";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import {auth} from "../firebase.js";
+
 const steps = ['Add your basic details', 'Add your skills', 'Add your job preference'];
+
+// new code
+
+// new code ends 
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -83,13 +89,13 @@ export default function HorizontalLinearStepper() {
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
-            <Button onClick={handleReset}>Reset</Button>
+            <Button onClick={handleReset}>Submit</Button>
           </Box>
 
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+          {/* <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
             <Button onClick={handleReset}>Reset</Button>
-          </Box>
+          </Box> */}
 
         </React.Fragment>
       ) : (

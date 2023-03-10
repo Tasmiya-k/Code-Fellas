@@ -12,14 +12,14 @@ export default function FirstPage() {
       autoComplete="off"
     >
       <div className="register" >
-        <div className="col-1" style={{padding:"12px 12px 12px 12px"}}>
-            <h2>Add Your top 5 skills</h2>
-          <form id="form" className="flex flex-col">
-            <input type="text" placeholder="Skill 1" />
-            <input type="text" placeholder="Skill 2" />
-            <input type="text" placeholder="Skill 3" />
-            <input type="text" placeholder="Skill 4" />
-            <input type="text" placeholder="Skill 5" />
+        <div className="col-1" style={{padding:"5px 5px 5px 5px"}}>
+            <h2 style={{textAlign:"center"}}>Add Your top 5 skills</h2>
+          <form id="form" className="flex flex-col" >
+            <input type="text" placeholder="Skill 1" style={{border:"1px solid #2991f8"}}/>
+            <input type="text" placeholder="Skill 2" style={{border:"1px solid #2991f8"}}/>
+            <input type="text" placeholder="Skill 3" style={{border:"1px solid #2991f8"}}/>
+            <input type="text" placeholder="Skill 4" style={{border:"1px solid #2991f8"}}/>
+            <input type="text" placeholder="Skill 5" style={{border:"1px solid #2991f8"}}/>
           </form>
           
         </div>

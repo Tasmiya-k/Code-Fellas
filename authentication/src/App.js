@@ -5,6 +5,7 @@ import Login from "./components/Login"
 import {Container,Row ,Col } from 'react-bootstrap';
 import Box from '@mui/material/Box';
 import Signup from './components/Signup';
+import Landing from './components/Landing';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Row>
         <Col>
         <Routes>
+        <Route path="/" element={<Landing/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
         </Routes>

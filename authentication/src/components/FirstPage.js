@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { fontFamily } from "@mui/system";
-
+// import {useRef} from "react";
   
 export default function FirstPage() {
   return (
@@ -18,7 +18,7 @@ export default function FirstPage() {
         
         <div className="col-1" style={{padding:"5px 5px 5px 5px"}}>
         <h2 style={{textAlign:"center"}}>Fill your details</h2>
-          <div className="row1" style={{padding:"20px 4px 12px 30px"}} >
+          <div className="row1" style={{padding:"1px 4px 12px 30px"}} >
             <TextField required id="outlined-required" label="First name" />
             <TextField required id="outlined-required" label="Last Name" />
           </div>
@@ -41,14 +41,16 @@ export default function FirstPage() {
           <div className="row4" style={{padding:"20px 4px 12px 30px"}}>
             <TextField
               required
-              id="outlined-required"
-              label="Create Username"
+              id="email"
+              label="Your Email ID"
+              // ref={emailInputRef}
             />
             <TextField
               id="outlined-password-input"
               label="Password"
               type="password"
               autoComplete="current-password"
+              // ref={passwordInputRef}
             />
           </div>
         </div>
