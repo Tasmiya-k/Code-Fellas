@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
 body {
-  /* background-image: url("./assets/bg.webp"); */
   background-size: "cover";
   background-color: #f3f1f1;
   display: flex;
@@ -9,6 +10,7 @@ body {
   align-items: center;
   background-repeat:no-repeat; 
   height: 100vh;
+  font-family: 'Roboto Slab', serif;
 
 }
 
@@ -33,6 +35,7 @@ body {
   width:600px;
   display:flex;
   justify-content: center;
+  height:450px;
 }
 #form{
   max-width: 320px;
@@ -62,9 +65,9 @@ body {
   margin: auto;
   padding: 3em 0;
 }
-.col-1 h4{
-  font-size:20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.col-1 h2{
+  font-size:24px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .row3 >  input{
@@ -77,4 +80,16 @@ body {
   
   .row3> input:focus{
     outline: none;
+  }
+
+  .cont{
+    background-color: #fff;
+    border:3px solid #030303;
+    border-radius:14px;
+  }    
+  .reg{
+    background-color: #fff;
+    border:3px solid #030303;
+    border-radius:14px;
+    padding:20px;
   }

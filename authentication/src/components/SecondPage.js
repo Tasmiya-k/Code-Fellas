@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import bgImg from "../assets/img1.jpg"
 export default function FirstPage() {
   return (
     <Box
@@ -14,7 +13,7 @@ export default function FirstPage() {
     >
       <div className="register" >
         <div className="col-1" style={{padding:"12px 12px 12px 12px"}}>
-            <h4>Add Your top 5 skills</h4>
+            <h2>Add Your top 5 skills</h2>
           <form id="form" className="flex flex-col">
             <input type="text" placeholder="Skill 1" />
             <input type="text" placeholder="Skill 2" />

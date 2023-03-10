@@ -9,8 +9,8 @@ import Signup from './components/Signup';
 function App() {
   return (
     
-    <Container style={{border: '3px solid black', borderRadius:"20px"}}>
-      <Box sx={{ bgcolor: "#f8f7f7" }} style={{padding: "30px 30px 30px 30px", borderRadius:"20px"}}>
+    <Container>
+      <Box>
       <Row>
         <Col>
         <Routes>

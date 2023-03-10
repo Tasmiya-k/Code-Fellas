@@ -8,12 +8,15 @@ import Typography from '@mui/material/Typography';
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
 import ThirdPage from "./ThirdPage";
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import {auth} from "../firebase.js";
 const steps = ['Add your basic details', 'Add your skills', 'Add your job preference'];
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
 
+  
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -57,7 +60,7 @@ export default function HorizontalLinearStepper() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%' }} className="reg">
       <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};

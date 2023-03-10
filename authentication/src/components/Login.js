@@ -18,7 +18,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        WorkMitra
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -40,20 +40,11 @@ export default function SignIn() {
     });
   };
 
-  const [errorMsg, setErrorMsg]=usestate("");
-
-  const handleSubmission=()=>{
-    if(data.username || data.password){
-      setErrorMsg("Fill all the details");
-      return;
-    }
-    setErrorMsg("");
-    console.log(data);
-  }
+  
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs"  className="cont">
         <CssBaseline />
         <Box
           sx={{
@@ -61,9 +52,10 @@ export default function SignIn() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor:'InactiveBorder' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -99,7 +91,6 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={handleSubmission}
             >
               Sign In
             </Button>
