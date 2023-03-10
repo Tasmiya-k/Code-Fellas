@@ -12,6 +12,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { signInWithPopup } from 'firebase/auth';
+import {auth, provider} from "../firebase";
+
+
 
 function Copyright(props) {
   return (
@@ -25,7 +29,11 @@ function Copyright(props) {
     </Typography>
   );
 }
-
+const signInWithGoogle = () => {
+  signInWithPopup(auth, provider).then((result) => {
+    localStorage.setItem("isAuth", true);   
+  })
+}
 
 
 const theme = createTheme();
@@ -105,6 +113,7 @@ export default function SignIn() {
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
+              <Button className='login-with-google-btn'onClick={signInWithGoogle}>Sign in with Google</Button>
             </Grid>
           </Box>
         </Box>
