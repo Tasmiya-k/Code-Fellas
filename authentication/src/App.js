@@ -5,7 +5,11 @@ import Login from "./components/Login"
 import {Container,Row ,Col } from 'react-bootstrap';
 import Box from '@mui/material/Box';
 import Signup from './components/Signup';
-import Landing from './components/Landing';
+import Landing from "./components/Landing"
+import AboutUs from './components/AboutUs';
+import Form from "./components/Form";
+import Card from "./components/Card";
+
 
 function App() {
   return (
@@ -15,9 +19,13 @@ function App() {
       <Row>
         <Col>
         <Routes>
+        <Route path="/logine" element={<Form/>} />
         <Route path="/" element={<Landing/>} />
+        <Route path="/aboutus" element={<AboutUs/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
+          <Route path="/findjob" element={<Card/>} />
+          
         </Routes>
         </Col>
       </Row>
