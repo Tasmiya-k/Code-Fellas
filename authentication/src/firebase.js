@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {getAuth, GoogleAuthProvider} from "firebase/auth";
+
 const firebaseConfig = {
     apiKey: "AIzaSyD1zQXj5PAqdLad-oQ3OdlaVCtjl5RWhlY",
     authDomain: "joblisting-94b3e.firebaseapp.com",
@@ -14,5 +15,7 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
   export const auth=getAuth(app);
   export const provider=new GoogleAuthProvider();
+ 
+
   export default app;
 

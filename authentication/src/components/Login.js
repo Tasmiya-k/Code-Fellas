@@ -4,6 +4,12 @@ import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+
+  
+  // if (!browserSupportsSpeechRecognition) {
+  //   return <span>Browser doesn't support speech recognition.</span>;
+  // }
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -32,9 +38,17 @@ const Login = () => {
       console.log(error.message);
     }
   };
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition
+  } = useSpeechRecognition();
+
 
   return (
     <>
+    <p>Microphone: {listening ? 'on' : 'off'}</p>
       <div className="p-4 box" style={{backgroundColor:"#fff"}}>
         <h2 className="mb-3">Login</h2>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -44,7 +58,10 @@ const Login = () => {
               type="email"
               placeholder="Email address"
               onChange={(e) => setEmail(e.target.value)}
+              value={transcript}
             />
+            
+            
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -53,6 +70,7 @@ const Login = () => {
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
+            
           </Form.Group>
 
           <div className="d-grid gap-2">
@@ -73,6 +91,11 @@ const Login = () => {
       <div className="p-4 box mt-3 text-center" style={{backgroundColor:"#fff"}}>
         Don't have an account? <Link to="/signup">Sign up</Link>
       </div>
+      <button onClick={SpeechRecognition.startListening}>Start</button>
+      <button onClick={SpeechRecognition.stopListening}>Stop</button>
+      <button onClick={resetTranscript}>Reset</button>
+      
+      {/* <p>{transcript}</p> */}
     </>
   );
 };

@@ -14,6 +14,7 @@ import Dashboard from './components/Dashboard';
 import ProtectedRoute from "./components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 
+
 function App() {
   return (
     
@@ -33,6 +34,7 @@ function App() {
           <Route path="/findjob" element={<Card/>} />
           <Route path="/voice" element={<Voice/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
+          
         </Routes>
         </UserAuthContextProvider>
         </Col>
