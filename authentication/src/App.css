@@ -251,7 +251,6 @@ body {
   color:#1a1a1a;
   font-size:16px;
 }
-
  .pro .desc  i{
   font-size:12px;
   color:rgb(243,181,25);
@@ -266,4 +265,13 @@ body {
 .google{
   padding:80px;
   color:#1a1a1a
+}
+.profile{
+  padding-left:90px
+}
+.profimg{
+  height: 50px;
+  /* margin: 8px 7px; */
+  width:50px;
+  clip-path: circle(50% at 50% 50%);
 }

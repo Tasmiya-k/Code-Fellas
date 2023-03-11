@@ -4,6 +4,7 @@ import logo from "../assets/logo.jpeg";
 import Login from "../components/Login";
 import {Routes, Route} from "react-router-dom";
 import {useHistory} from "react-router-dom";
+import profile from "../assets/prof.webp"
 
 
 import {
@@ -73,16 +74,23 @@ function navbar() {
               <Tab label="" />
             </Tabs>
 
-            <a href="/login" style={{marginLeft:"420px"}}>
+            <a href="/login">
             <Button
-              sx={{ marginLeft: "auto", marginRight: "8px" ,fontSize:"20px"}}
+              sx={{ marginLeft: "auto", marginRight: "8px" ,fontSize:"20px", width:"160px"}}
               variant="contained"  
             >
               Login
             </Button>
       </a>
+            <a href='/logine'>
+            <Button variant="contained" sx={{marginLeft: "10px",fontSize:"20px"}} >Are you Hiring?</Button></a>
+        
             
-            <Button variant="contained" style={{fontSize:"20px" }}>Are you Hiring?</Button>
+            <Button variant="contained" style={{marginLeft:"10px", fontSize:"20px"}} >Change Language</Button>
+            <div className="profile" >
+            <a href="/dashboard"><img src={profile} className="profimg" ></img></a>
+            </div>
+            
           </Toolbar>
         </AppBar>
       </React.Fragment>

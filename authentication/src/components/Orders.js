@@ -16,7 +16,7 @@ const rows = [
   createData(
     0,
     '16 Mar, 2019',
-    'Elvis Presley',
+    'DELHI',
     'Ola',
     'PENDING',
     312.44,
@@ -24,16 +24,16 @@ const rows = [
   createData(
     1,
     '16 Mar, 2019',
-    'Paul McCartney',
+    'DELHI',
     'Zomato',
-    'VISA ⠀•••• 2574',
+    'ACCEPTED',
     866.99,
   ),
-  createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
+  createData(2, '16 Mar, 2019', 'DELHI', 'SWIGGY', 'ACCEPTED', 100.81),
   createData(
     3,
     '16 Mar, 2019',
-    'Michael Jackson',
+    'DELHI',
     'Cardekho',
     'PENDING',
     654.39,
@@ -41,7 +41,7 @@ const rows = [
   createData(
     4,
     '15 Mar, 2019',
-    'Bruce Springsteen',
+    'DELHI',
     'Uber',
     'PENDING',
     212.79,

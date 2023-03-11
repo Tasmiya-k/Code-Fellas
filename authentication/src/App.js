@@ -11,6 +11,8 @@ import Form from "./components/Form";
 import Card from "./components/Card";
 import Voice from "./components/Voice";
 import Dashboard from './components/Dashboard';
+import ProtectedRoute from "./components/ProtectedRoute";
+import { UserAuthContextProvider } from "./context/UserAuthContext";
 
 function App() {
   return (
@@ -19,10 +21,12 @@ function App() {
       <Box>
       <Row>
         <Col>
+        <UserAuthContextProvider>
         <Routes>
+        <Route path="/" element={<ProtectedRoute><Landing/></ProtectedRoute>}/>
         
         <Route path="/logine" element={<Form/>} />
-        <Route path="/" element={<Landing/>} />
+        
         <Route path="/aboutus" element={<AboutUs/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup/>} />
@@ -30,6 +34,7 @@ function App() {
           <Route path="/voice" element={<Voice/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
+        </UserAuthContextProvider>
         </Col>
       </Row>
       </Box>
