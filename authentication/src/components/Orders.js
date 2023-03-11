@@ -17,15 +17,15 @@ const rows = [
     0,
     '16 Mar, 2019',
     'Elvis Presley',
-    'Tupelo, MS',
-    'VISA ⠀•••• 3719',
+    'Ola',
+    'PENDING',
     312.44,
   ),
   createData(
     1,
     '16 Mar, 2019',
     'Paul McCartney',
-    'London, UK',
+    'Zomato',
     'VISA ⠀•••• 2574',
     866.99,
   ),
@@ -34,16 +34,16 @@ const rows = [
     3,
     '16 Mar, 2019',
     'Michael Jackson',
-    'Gary, IN',
-    'AMEX ⠀•••• 2000',
+    'Cardekho',
+    'PENDING',
     654.39,
   ),
   createData(
     4,
     '15 Mar, 2019',
     'Bruce Springsteen',
-    'Long Branch, NJ',
-    'VISA ⠀•••• 5919',
+    'Uber',
+    'PENDING',
     212.79,
   ),
 ];
@@ -55,15 +55,15 @@ function preventDefault(event) {
 export default function Orders() {
   return (
     <React.Fragment>
-      <Title>Recent Orders</Title>
+      <Title>Applied Job</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
             <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
-            <TableCell>Payment Method</TableCell>
-            <TableCell align="right">Sale Amount</TableCell>
+            <TableCell>Company</TableCell>
+            <TableCell>Status</TableCell>
+            <TableCell align="right">Track</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -73,7 +73,7 @@ export default function Orders() {
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.shipTo}</TableCell>
               <TableCell>{row.paymentMethod}</TableCell>
-              <TableCell align="right">{`$${row.amount}`}</TableCell>
+              <TableCell align="right"><button>TRACK APPLICATION</button></TableCell>
             </TableRow>
           ))}
         </TableBody>
